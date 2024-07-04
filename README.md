@@ -63,7 +63,7 @@
 ~/MMProBumpBot >>> venv\Scripts\activate
 ~/MMProBumpBot >>> pip install -r requirements.txt
 ~/MMProBumpBot >>> copy .env-example .env
-~/MMProBumpBot >>> nano .env # укажите ваши API_ID и API_HASH, остальное можно оставить по умолчанию
+~/MMProBumpBot >>> откройте .env файл и укажите ваши API_ID и API_HASH, остальное можно оставить по умолчанию
 ~/MMProBumpBot >>> python main.py
 ```
 
