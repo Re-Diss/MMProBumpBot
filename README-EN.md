@@ -64,7 +64,7 @@ You can download [**Repository**](https://github.com/Re-Diss/MMProBumpBot) by cl
 ~/MMProBumpBot >>> venv\Scripts\activate
 ~/MMProBumpBot >>> pip install -r requirements.txt
 ~/MMProBumpBot >>> copy .env-example .env
-~/MMProBumpBot >>> # specify your API_ID and API_HASH, the rest can be left as default
+~/MMProBumpBot >>> # open .env file and specify your API_ID and API_HASH, the rest can be left as default
 ~/MMProBumpBot >>> python main.py
 ```
 
