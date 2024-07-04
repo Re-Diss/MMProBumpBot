@@ -104,7 +104,7 @@ class Claimer:
 			await asyncio.sleep(delay=random.randint(500,700))
 			return {}
 
-	async def grant_day(self, http_client: aiohttp.ClientSession) -> bool:
+	async def day_grant(self, http_client: aiohttp.ClientSession) -> bool:
 		url = 'https://api.mmbump.pro/v1/grant-day/claim'
 		try:
 			await http_client.options(url)
@@ -218,8 +218,8 @@ class Claimer:
 					if boost: boost = int(boost[1:])
 					system_time = profile['system_time']
 					self.balance = profile['balance']
-					grant_day_first = profile.get('grant_day_first', None)
-					grant_day_day = profile.get('grant_day_day', None)
+					day_grant_first = profile.get('day_grant_first', None)
+					day_grant_day = profile.get('day_grant_day', None)
 					session = profile['session']
 					status = session['status']
 					if status == 'inProgress':
@@ -228,9 +228,9 @@ class Claimer:
 					# Log current balance
 					logger.info(f"{self.session_name} | Balance: {self.balance}")
 
-					daily_grant_awail, daily_grant_wait = await self.check_daily_grant(start_time=grant_day_first, cur_time=system_time, day=grant_day_day)
+					daily_grant_awail, daily_grant_wait = await self.check_daily_grant(start_time=day_grant_first, cur_time=system_time, day=day_grant_day)
 					if daily_grant_awail:
-						if await self.grant_day(http_client=http_client):
+						if await self.day_grant(http_client=http_client):
 							logger.success(f"{self.session_name} | Daily grant claimed.")
 						continue
 						
@@ -254,7 +254,7 @@ class Claimer:
 								logger.info(f"{self.session_name} | Farming active. Waiting for {hours} hours and {minutes} minutes before claiming and restarting.")
 								await asyncio.sleep(claim_wait)
 						
-						logger.info(f"{self.session_name} | Time to claim and restart farming.")
+						logger.info(f"{self.session_name} | Can claim and restart farming.")
 						taps = await self.calculate_taps(farm=farm, boost=boost)
 						if await self.send_claim(http_client=http_client, taps=taps):
 							logger.success(f"{self.session_name} | Claim successful.")
