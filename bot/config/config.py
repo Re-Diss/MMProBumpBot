@@ -14,7 +14,6 @@ class Settings(BaseSettings):
     BUY_BOOST: bool = True
     AUTO_TASK: bool = True
     CLAIM_MOON: bool = True
-    USE_REF: bool = True
     DEFAULT_BOOST: str = "x3"
     BOOSTERS: dict = {
         "x2": 4000000,

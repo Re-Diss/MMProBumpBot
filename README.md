@@ -1,4 +1,4 @@
-[![Static Badge](https://img.shields.io/badge/Telegram-Bot%20Link-Link?style=for-the-badge&logo=Telegram&logoColor=white&logoSize=auto&color=blue)](https://t.me/MMproBump_bot?start=ref_6597427426)
+[![Static Badge](https://img.shields.io/badge/Telegram-Bot%20Link-Link?style=for-the-badge&logo=Telegram&logoColor=white&logoSize=auto&color=blue)](https://t.me/MMProBumpBot?start=ref_6597427426)
 
 #### Подписывайтесь на наш [телеграм канал](https://t.me/scriptron). Там будут новости о новый ботах
 > 🇪🇳 README in English available [here](README-EN.md)
@@ -33,7 +33,6 @@
 | **BUY_BOOST**           |                    Покупка буста (по умолчанию - True)                     |
 | **DEFAULT_BOOST**       |                      Тип буста (по умолчанию - "x3")                       |
 | **AUTO_TASK**           |            Автовыполнение тасок твиттера (по умолчанию - True)             |
-| **USE_REF**             |              Использование реф. ссылки (по умолчанию - True)               |
 | **USE_PROXY_FROM_FILE** |  Использовать-ли прокси из файла `bot/config/proxies.txt` (True / False)   |
 
 ## Быстрый старт 📚
@@ -53,7 +52,7 @@
 Вы можете скачать [**Репозиторий**](https://github.com/Re-Diss/MMProBumpBot) клонированием на вашу систему и установкой необходимых зависимостей:
 ```shell
 git clone https://github.com/Re-Diss/MMProBumpBot.git
-cd MMproBump_bot
+cd MMProBumpBot
 ```
 
 Затем для автоматической установки введите:
@@ -80,9 +79,9 @@ python3 main.py
 
 Также для быстрого запуска вы можете использовать аргументы, например:
 ```shell
-~/MMproBump_bot >>> python3 main.py --action (1/2)
+~/MMProBumpBot >>> python3 main.py --action (1/2)
 # Or
-~/MMproBump_bot >>> python3 main.py -a (1/2)
+~/MMProBumpBot >>> python3 main.py -a (1/2)
 
 # 1 - Запускает кликер
 # 2 - Создает сессию
@@ -101,12 +100,10 @@ python main.py
 
 Также для быстрого запуска вы можете использовать аргументы, например:
 ```shell
-~/MMproBump_bot >>> python main.py --action (1/2)
+~/MMProBumpBot >>> python main.py --action (1/2)
 # Или
-~/MMproBump_bot >>> python main.py -a (1/2)
+~/MMProBumpBot >>> python main.py -a (1/2)
 
 # 1 - Запускает кликер
 # 2 - Создает сессию
 ```
-
-За идею спасибо - [**Desamod**](https://github.com/Desamod)

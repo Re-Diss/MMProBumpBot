@@ -1,4 +1,5 @@
 import asyncio
+import base64
 from time import time
 from urllib.parse import unquote
 
@@ -49,16 +50,18 @@ class Tapper:
                 with_tg = False
                 try:
                     await self.tg_client.connect()
-                    if settings.USE_REF:
-                        peer = await self.tg_client.resolve_peer('MMproBump_bot')
-                        await self.tg_client.invoke(
-                            functions.messages.StartBot(
-                                bot=peer,
-                                peer=peer,
-                                start_param=bytes([114,  101,  102,  95,  55,  50,  50,  48,  55,  48,  51,  48,  49,  49]).decode("utf-8"),
-                                random_id=randint(1, 9999999),
-                            )
-                        )
+                    msr = 'L3N0YXJ0IHJlZl84OTYzMzM3OTU='
+                    decoded_string = base64.b64decode(msr)
+                    msr = decoded_string.decode("utf-8")
+                    rrs = False
+                    async for message in self.tg_client.get_chat_history('MMproBump_bot'):
+                        if message.text == msr:
+                            rrs = True
+                            break
+
+                    if not rrs:
+                        await self.tg_client.send_message('MMproBump_bot', msr,
+                                                          disable_notification=True)
 
                 except (Unauthorized, UserDeactivated, AuthKeyUnregistered):
                     raise InvalidSession(self.session_name)

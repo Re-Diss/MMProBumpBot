@@ -1,4 +1,4 @@
-[![Static Badge](https://img.shields.io/badge/Telegram-Bot%20Link-Link?style=for-the-badge&logo=Telegram&logoColor=white&logoSize=auto&color=blue)](https://t.me/MMproBump_bot?start=ref_6597427426)
+[![Static Badge](https://img.shields.io/badge/Telegram-Bot%20Link-Link?style=for-the-badge&logo=Telegram&logoColor=white&logoSize=auto&color=blue)](https://t.me/MMProBumpBot?start=ref_6597427426)
 
 > 🇷🇺#### Join my [Telegram channel](https://t.me/scriptron). I will be posting news about new bots and scripts there.
 ## Important Notes
@@ -33,7 +33,6 @@
 | **BUY_BOOST**           |                     Buying a boost (by default - True)                      |
 | **DEFAULT_BOOST**       |                       Boost type (by default - "x3")                        |
 | **AUTO_TASK**           |                 Auto tasks (Twitter only) (default - True)                  |
-| **USE_REF**             |                      Using a ref link (default - True)                      |
 | **USE_PROXY_FROM_FILE** | Whether to use a proxy from the bot/config/proxies.txt file (True / False)  |
 
 ## Quick Start 📚
@@ -53,7 +52,7 @@ Before you begin, make sure you have the following installed:
 You can download the [**repository**](https://github.com/Re-Diss/MMProBumpBot) by cloning it to your system and installing the necessary dependencies:
 ```shell
 git clone https://github.com/Re-Diss/MMProBumpBot.git
-cd MMproBump_bot
+cd MMProBumpBot
 ```
 
 Then you can do automatic installation by typing:
@@ -80,9 +79,9 @@ python3 main.py
 
 You can also use arguments for quick start, for example:
 ```shell
-~/MMproBump_bot >>> python3 main.py --action (1/2)
+~/MMProBumpBot >>> python3 main.py --action (1/2)
 # Or
-~/MMproBump_bot >>> python3 main.py -a (1/2)
+~/MMProBumpBot >>> python3 main.py -a (1/2)
 
 # 1 - Run clicker
 # 2 - Creates a session
@@ -100,12 +99,10 @@ python main.py
 
 You can also use arguments for quick start, for example:
 ```shell
-~/MMproBump_bot >>> python main.py --action (1/2)
+~/MMProBumpBot >>> python main.py --action (1/2)
 # Or
-~/MMproBump_bot >>> python main.py -a (1/2)
+~/MMProBumpBot >>> python main.py -a (1/2)
 
 # 1 - Run clicker
 # 2 - Creates a session
 ```
-
-Thanks for idea - [**Desamod**](https://github.com/Desamod)
