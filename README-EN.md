@@ -26,12 +26,12 @@
 | Settings                |                                 Description                                 |
 |-------------------------|:---------------------------------------------------------------------------:|
 | **API_ID / API_HASH**   | Platform data from which to run the Telegram session (by default - android) |
-| **SLEEP_BETWEEN_CLAIM**          | Sleep before claiming the reward, by default: [3600, 5600] seconds |
-| **TAPS_COUNT**          | How much clicks bot will get in farm cycle (by default - [500000, 1000000]) |
+| **SLEEP_BETWEEN_CLAIM**          |     Sleep before claiming the reward, by default: [3600, 5600] seconds      |
+| **TAPS_COUNT**          |  How much clicks bot will get in farm cycle (by default - [50000, 100000])  |
 | **CLAIM_MOON**          |                Collecting a farm bonus  (by default - True)                 |
 | **MOON_BONUS**          |                   Moon-Bonus count (by default - 1000000)                   |
 | **BUY_BOOST**           |                     Buying a boost (by default - True)                      |
-| **DEFAULT_BOOST**       |                       Boost type (by default - "x5")                        |
+| **DEFAULT_BOOST**       |                       Boost type (by default - "x3")                        |
 | **AUTO_TASK**           |                 Auto tasks (Twitter only) (default - True)                  |
 | **USE_REF**             |                      Using a ref link (default - True)                      |
 | **USE_PROXY_FROM_FILE** | Whether to use a proxy from the bot/config/proxies.txt file (True / False)  |
