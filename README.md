@@ -108,3 +108,5 @@ python main.py
 # 1 - Запускает кликер
 # 2 - Создает сессию
 ```
+
+За идею спасибо - [**Desamod**](https://github.com/Desamod)

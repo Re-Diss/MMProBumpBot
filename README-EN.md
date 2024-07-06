@@ -107,3 +107,5 @@ You can also use arguments for quick start, for example:
 # 1 - Run clicker
 # 2 - Creates a session
 ```
+
+Thanks for idea - [**Desamod**](https://github.com/Desamod)
