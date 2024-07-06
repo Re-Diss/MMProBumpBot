@@ -1,5 +1,7 @@
 [![Static Badge](https://img.shields.io/badge/Telegram-Bot%20Link-Link?style=for-the-badge&logo=Telegram&logoColor=white&logoSize=auto&color=blue)](https://t.me/MMProBumpBot?start=ref_6597427426)
 
+### [MMProBumpBot ссылка](https://t.me/MMProBumpBot?start=ref_6597427426)
+
 #### Подписывайтесь на наш [телеграм канал](https://t.me/scriptron). Там будут новости о новый ботах
 > 🇪🇳 README in English available [here](README-EN.md)
 ## Важно
