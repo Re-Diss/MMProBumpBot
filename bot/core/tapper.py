@@ -277,6 +277,26 @@ class Tapper:
                 f"{self.session_name} | Unknown error when Moon Claiming: {error}")
             await asyncio.sleep(delay=randint(500, 700))
 
+    async def buy_boost(self, http_client: aiohttp.ClientSession, balance: int):
+        try:
+            boost_costs = settings.BOOSTERS[settings.DEFAULT_BOOST]
+            if boost_costs > balance:
+                logger.warning(f"{self.session_name} | Can't buy boost, not enough points | Balance: <e>{balance}</e> "
+                               f"| Boost costs: <r>{boost_costs}</r>")
+                return
+            response = await http_client.post('https://api.mmbump.pro/v1/product-list/buy', json={'id': settings.DEFAULT_BOOST})
+            response.raise_for_status()
+            response_json = await response.json()
+
+            new_balance = response_json['balance']
+            boost_id = response_json['id']
+            logger.success(f"{self.session_name} | Bought boost <light-yellow>{boost_id}</light-yellow> | Balance: <e>{new_balance}</e>")
+
+        except Exception as error:
+            logger.error(f"{self.session_name} | Unknown error when buying the boost: {error}")
+            await asyncio.sleep(delay=randint(500,700))
+
+
     async def run(self, proxy: str | None) -> None:
         access_token_created_time = 0
         claim_time = 0
