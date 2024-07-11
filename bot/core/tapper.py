@@ -23,7 +23,7 @@ class Tapper:
         self.session_name = tg_client.name
         self.tg_client = tg_client
 
-    async def get_tg_web_data(self, proxy: str | None) -> str:
+    async def get_tg_web_data(self, proxy: str | None, http_client: aiohttp.ClientSession) -> str:
         if proxy:
             proxy = Proxy.from_str(proxy)
             proxy_dict = dict(
@@ -80,6 +80,9 @@ class Tapper:
                 url="https://mmbump.pro/",
             ))
 
+            me = await self.tg_client.get_me()
+            http_client.headers["User_auth"] = str(me.id)
+
             auth_url = web_view.url
             tg_web_data = unquote(
                 string=unquote(
@@ -133,7 +136,7 @@ class Tapper:
 
     async def get_info_data(self, http_client: aiohttp.ClientSession):
         try:
-            response = await http_client.get('https://api.mmbump.pro/v1/farming')
+            response = await http_client.post('https://api.mmbump.pro/v1/farming')
             response.raise_for_status()
 
             response_json = await response.json()
@@ -311,7 +314,7 @@ class Tapper:
                 logger.info("Starting main loop iteration")
                 if time() - access_token_created_time >= randint(3500, 3700):
                     logger.info("Refreshing access token")
-                    tg_web_data = await self.get_tg_web_data(proxy=proxy)
+                    tg_web_data = await self.get_tg_web_data(proxy=proxy, http_client=http_client)
                     token = await self.login(http_client=http_client, tg_web_data=tg_web_data)
 
                     if token:
@@ -348,9 +351,9 @@ class Tapper:
                                 await asyncio.sleep(delay=randint(500, 700))
                             await self.claim_daily(http_client=http_client)
 
-                    if settings.AUTO_TASK:
-                        await asyncio.sleep(delay=randint(3, 5))
-                        await self.processing_tasks(http_client=http_client)
+                    # if settings.AUTO_TASK:
+                    #     await asyncio.sleep(delay=randint(3, 5))
+                    #     await self.processing_tasks(http_client=http_client)
 
                 info_data = await self.get_info_data(http_client=http_client)
 
