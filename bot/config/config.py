@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     SLEEP_BETWEEN_CLAIM: list[int] = [3600, 5600]
     MOON_BONUS: int = 1000000
     BUY_BOOST: bool = True
-    AUTO_TASK: bool = True
+    # AUTO_TASK: bool = True
     CLAIM_MOON: bool = True
     DEFAULT_BOOST: str = "x3"
     BOOSTERS: dict = {

@@ -18,7 +18,6 @@
 | Auto-farming                                              |     ✅     |
 | Auto-taps                                                 |     ✅     |
 | Collect bonus in every farming cycle                      |     ✅     |
-| Auto-tasks (twitter only)                                 |     ✅     |
 | Auto-boost                                                |     ✅     |
 | Auto-daily                                                |     ✅     |
 
@@ -33,7 +32,6 @@
 | **MOON_BONUS**          |                   Moon-Bonus count (by default - 1000000)                   |
 | **BUY_BOOST**           |                     Buying a boost (by default - True)                      |
 | **DEFAULT_BOOST**       |                       Boost type (by default - "x3")                        |
-| **AUTO_TASK**           |                 Auto tasks (Twitter only) (default - True)                  |
 | **USE_PROXY_FROM_FILE** | Whether to use a proxy from the bot/config/proxies.txt file (True / False)  |
 
 ## Quick Start 📚
