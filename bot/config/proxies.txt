@@ -1,4 +1,5 @@
-socks5://178.159.34.225:6172@gigska11:bochkasala
-socks5://178.159.34.213:6160@gigska11:bochkasala
-socks5://178.159.34.191:6138@gigska11:bochkasala
-socks5://178.159.34.186:6133@gigska11:bochkasala
+type://user:pass@ip:port
+type://user:pass:ip:port
+type://ip:port:user:pass
+type://ip:port@user:pass
+type://ip:port
